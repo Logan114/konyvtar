@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Book;
+use App\Models\LibUser;
+use Carbon\Factory;
+use Database\Factories\BookFactory;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,10 +17,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        LibUser::Factory(69)->create(); 
+        Book::factory(10)->create();
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
